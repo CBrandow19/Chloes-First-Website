@@ -50,12 +50,20 @@
     </button>
     
     <script>
+        let clickCount = 0;
+
         function handleClick() {
             var r = Math.floor(Math.random() * 256);
             var g = Math.floor(Math.random() * 256);
             var b = Math.floor(Math.random() * 256);
             
             document.querySelector("body").style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+            clickCount ++;
+
+            if (clickCount >= 10){
+                window.location.href = "video.html";
+            }
         }
     </script>
 </body>
